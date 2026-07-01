@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Veena Prasad — IT Student at College of Engineering Vadakara, FY Coordinator at TinkerHub, and IPR Lead at IEDC CEV." />
+  <title>Veena Prasad | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ========== NAV ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">VP<span class="dot">.</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+      <canvas id="particles"></canvas>
+    </div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <p class="hero-greeting">Hello, I'm</p>
+        <h1 class="hero-name">Veena <span class="gradient-text">Prasad</span></h1>
+        <div class="hero-role">
+          <span class="role-prefix">I build </span>
+          <span class="typewriter" id="typewriter"></span>
+          <span class="cursor">|</span>
+        </div>
+        <p class="hero-bio">
+          IT student @ College of Engineering Vadakara | FY coordinator @ TinkerHub | IPR lead @ IEDC CEV. Passionate about coding, innovation, and community building.
+        </p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary" id="hero-projects-btn">View My Work</a>
+          <a href="#contact" class="btn btn-ghost" id="hero-contact-btn">Get In Touch</a>
+        </div>
+        <div class="social-links">
+          <a href="https://github.com/veenveenaprasad/" target="_blank" class="social-link" id="social-github" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/veenaveenaprasad/" target="_blank" class="social-link" id="social-linkedin" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="mailto:veenveenaprasad@gmail.com" class="social-link" id="social-email" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="hero-avatar">
+        <div class="avatar-ring">
+          <div class="avatar-ring-inner">
+            <img src="profile.png" alt="Veena Prasad" class="avatar-img" id="profile-photo" />
+          </div>
+        </div>
+        <div class="floating-badge badge-react">React</div>
+        <div class="floating-badge badge-python">Python</div>
+        <div class="floating-badge badge-db">PostgreSQL</div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT ========== -->
+  <section class="section about-section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">01 / About</span>
+        <h2 class="section-title">Who Am I?</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I'm <strong>Veena Prasad</strong>, an IT student at the <strong>College of Engineering Vadakara</strong>. I'm deeply passionate about building products, developing communities, and fostering student innovation.
+          </p>
+          <p>
+            Currently, I serve as the <strong>IPR Lead @ IEDC CEV</strong> and the <strong>First Year Coordinator @ TinkerHub</strong>, where I help organize peer learning groups, promote entrepreneurship, and guide next-gen developers. I specialize in frontend development with <strong>React</strong> and backend APIs using <strong>Django + PostgreSQL</strong>.
+          </p>
+          <p>
+            I also love driving design and outreach campaigns, having recently served as a part-time <strong>Publicity Team Member</strong> for the national tech-fest <strong>Quasso Liberum</strong>.
+          </p>
+          <div class="about-stats">
+            <div class="stat-card">
+              <span class="stat-number">5+</span>
+              <span class="stat-label">Projects Built</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">3</span>
+              <span class="stat-label">Tech Stacks</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">∞</span>
+              <span class="stat-label">Curiosity</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-visual">
+          <div class="code-card">
+            <div class="code-card-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <span class="code-filename">veena.py</span>
+            </div>
+            <pre class="code-body"><span class="kw">class</span> <span class="cn">Veena</span>:
+  name = <span class="str">"Veena Prasad"</span>
+  college = <span class="str">"CE Vadakara"</span>
+  roles = [
+    <span class="str">"IPR Lead @ IEDC CEV"</span>,
+    <span class="str">"FY Coordinator @ TinkerHub"</span>,
+    <span class="str">"Publicity Lead @ QL"</span>,
+  ]
+  stack = [<span class="str">"React"</span>, <span class="str">"Django"</span>, <span class="str">"PostgreSQL"</span>]
+
+  <span class="kw">def</span> <span class="fn">greet</span>(self):
+    <span class="kw">return</span> <span class="str">"Let's learn and grow together! 🚀"</span></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SKILLS ========== -->
+  <section class="section skills-section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">02 / Skills</span>
+        <h2 class="section-title">My Tech Stack</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-category" id="skill-frontend">
+          <h3 class="skill-cat-title"><span class="cat-icon">🎨</span> Frontend</h3>
+          <div class="skill-tags">
+            <span class="skill-tag" style="--clr:#61DAFB">React</span>
+            <span class="skill-tag" style="--clr:#E34F26">HTML5</span>
+            <span class="skill-tag" style="--clr:#1572B6">CSS3</span>
+            <span class="skill-tag" style="--clr:#F7DF1E">JavaScript</span>
+            <span class="skill-tag" style="--clr:#3178C6">TypeScript</span>
+            <span class="skill-tag" style="--clr:#764ABC">Redux</span>
+          </div>
+        </div>
+        <div class="skill-category" id="skill-backend">
+          <h3 class="skill-cat-title"><span class="cat-icon">⚙️</span> Backend</h3>
+          <div class="skill-tags">
+            <span class="skill-tag" style="--clr:#3776AB">Python</span>
+            <span class="skill-tag" style="--clr:#092E20">Django</span>
+            <span class="skill-tag" style="--clr:#009688">DRF</span>
+            <span class="skill-tag" style="--clr:#FF6B35">REST APIs</span>
+            <span class="skill-tag" style="--clr:#6DB33F">GraphQL</span>
+          </div>
+        </div>
+        <div class="skill-category" id="skill-database">
+          <h3 class="skill-cat-title"><span class="cat-icon">🗄️</span> Database</h3>
+          <div class="skill-tags">
+            <span class="skill-tag" style="--clr:#336791">PostgreSQL</span>
+            <span class="skill-tag" style="--clr:#4479A1">MySQL</span>
+            <span class="skill-tag" style="--clr:#47A248">MongoDB</span>
+            <span class="skill-tag" style="--clr:#DC382D">Redis</span>
+          </div>
+        </div>
+        <div class="skill-category" id="skill-tools">
+          <h3 class="skill-cat-title"><span class="cat-icon">🛠️</span> Tools & DevOps</h3>
+          <div class="skill-tags">
+            <span class="skill-tag" style="--clr:#F05032">Git</span>
+            <span class="skill-tag" style="--clr:#2496ED">Docker</span>
+            <span class="skill-tag" style="--clr:#232F3E">AWS</span>
+            <span class="skill-tag" style="--clr:#181717">GitHub</span>
+            <span class="skill-tag" style="--clr:#007ACC">VS Code</span>
+            <span class="skill-tag" style="--clr:#CB3837">Postman</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROJECTS ========== -->
+  <section class="section projects-section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">03 / Projects</span>
+        <h2 class="section-title">What I've Built</h2>
+      </div>
+      <div class="projects-grid">
+
+        <article class="project-card" id="project-1">
+          <div class="project-header">
+            <div class="project-icon">🛒</div>
+            <div class="project-links">
+              <a href="#" class="project-link" aria-label="View code" title="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              </a>
+              <a href="#" class="project-link" aria-label="Live demo" title="Live Demo">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">E-Commerce Platform</h3>
+          <p class="project-desc">A full-featured online shopping platform with user authentication, product management, cart functionality, and Stripe payment integration.</p>
+          <div class="project-tags">
+            <span class="ptag">React</span>
+            <span class="ptag">Django</span>
+            <span class="ptag">PostgreSQL</span>
+            <span class="ptag">Stripe</span>
+          </div>
+        </article>
+
+        <article class="project-card featured" id="project-2">
+          <div class="featured-badge">⭐ Featured</div>
+          <div class="project-header">
+            <div class="project-icon">📊</div>
+            <div class="project-links">
+              <a href="#" class="project-link" aria-label="View code">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              </a>
+              <a href="#" class="project-link" aria-label="Live demo">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">Task Management Dashboard</h3>
+          <p class="project-desc">A collaborative project management app with real-time updates, drag-and-drop boards, team collaboration, and analytics dashboard.</p>
+          <div class="project-tags">
+            <span class="ptag">React</span>
+            <span class="ptag">Django REST</span>
+            <span class="ptag">PostgreSQL</span>
+            <span class="ptag">WebSockets</span>
+          </div>
+        </article>
+
+        <article class="project-card" id="project-3">
+          <div class="project-header">
+            <div class="project-icon">🤖</div>
+            <div class="project-links">
+              <a href="#" class="project-link" aria-label="View code">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              </a>
+              <a href="#" class="project-link" aria-label="Live demo">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">AI Study Assistant</h3>
+          <p class="project-desc">An intelligent study tool that summarizes notes, generates quizzes, and tracks progress using NLP. Built with Python and integrated with OpenAI API.</p>
+          <div class="project-tags">
+            <span class="ptag">Python</span>
+            <span class="ptag">Django</span>
+            <span class="ptag">OpenAI API</span>
+            <span class="ptag">React</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== EXPERIENCE & LEADERSHIP ========== -->
+  <section class="section experience-section" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">04 / Experience</span>
+        <h2 class="section-title">Leadership & Experience</h2>
+      </div>
+      <div class="experience-grid">
+
+        <!-- IEDC Card -->
+        <div class="experience-card" id="exp-iedc">
+          <div class="exp-header">
+            <div class="exp-logo-container">
+              <!-- Custom IEDC SVG Logo -->
+              <svg viewBox="0 0 100 100" class="exp-logo-svg" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="50" cy="45" r="22" stroke="url(#iedcGrad)" stroke-width="4" />
+                <path d="M50 23v44M28 45h44" stroke="url(#iedcGrad)" stroke-width="2" stroke-linecap="round" />
+                <path d="M36 31l28 28M36 59l28-28M50 67v15M40 82h20" stroke="#22d3ee" stroke-width="3" stroke-linecap="round" />
+                <circle cx="50" cy="45" r="6" fill="#8b5cf6" />
+                <defs>
+                  <linearGradient id="iedcGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#8b5cf6" />
+                    <stop offset="100%" stop-color="#22d3ee" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <div class="exp-meta">
+              <span class="exp-duration">2026 – 2027</span>
+              <h3 class="exp-role">IPR Lead</h3>
+              <p class="exp-org">IEDC CEV (Executive Committee)</p>
+            </div>
+          </div>
+          <p class="exp-desc">
+            Leading Intellectual Property Rights awareness and initiatives. Educating student innovators on patents, copyrights, trademarks, and assisting in turning creative projects into protected startups.
+          </p>
+          <div class="exp-tags">
+            <span class="ptag">Intellectual Property</span>
+            <span class="ptag">Leadership</span>
+            <span class="ptag">Innovation</span>
+          </div>
+        </div>
+
+        <!-- TinkerHub Card -->
+        <div class="experience-card" id="exp-tinkerhub">
+          <div class="exp-header">
+            <div class="exp-logo-container">
+              <!-- Custom TinkerHub SVG Logo -->
+              <svg viewBox="0 0 100 100" class="exp-logo-svg" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="20" y="20" width="60" height="60" rx="12" stroke="url(#thGrad)" stroke-width="4" />
+                <path d="M35 38h30M50 38v28" stroke="#10b981" stroke-width="5" stroke-linecap="round" />
+                <path d="M42 66h16" stroke="#10b981" stroke-width="3" stroke-linecap="round" />
+                <circle cx="70" cy="30" r="4" fill="#ec4899" />
+                <defs>
+                  <linearGradient id="thGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#10b981" />
+                    <stop offset="100%" stop-color="#22d3ee" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <div class="exp-meta">
+              <span class="exp-duration">2025 – 2026</span>
+              <h3 class="exp-role">First Year Coordinator</h3>
+              <p class="exp-org">TinkerHub CEV Core Team</p>
+            </div>
+          </div>
+          <p class="exp-desc">
+            Organizing technology learning programs and hackathons for junior students. Conducting peer-to-peer training modules, bootcamps on programming languages, and fostering campus coding culture.
+          </p>
+          <div class="exp-tags">
+            <span class="ptag">Mentorship</span>
+            <span class="ptag">Community Building</span>
+            <span class="ptag">Tech Outreach</span>
+          </div>
+        </div>
+
+        <!-- Quasso Liberum Card -->
+        <div class="experience-card" id="exp-ql">
+          <div class="exp-header">
+            <div class="exp-logo-container">
+              <!-- Custom Quasso Liberum (QL) SVG Logo -->
+              <svg viewBox="0 0 100 100" class="exp-logo-svg" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M50 15 C 28 15, 15 28, 15 50 C 15 72, 28 85, 50 85 C 62 85, 73 78, 79 69" stroke="url(#qlGrad)" stroke-width="5" stroke-linecap="round" />
+                <path d="M45 45 L 80 80" stroke="url(#qlGrad)" stroke-width="5" stroke-linecap="round" />
+                <path d="M35 50 L 50 65 L 75 35" stroke="#ec4899" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+                <defs>
+                  <linearGradient id="qlGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#ec4899" />
+                    <stop offset="100%" stop-color="#8b5cf6" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <div class="exp-meta">
+              <span class="exp-duration">Jan 2026 – Feb 2026</span>
+              <h3 class="exp-role">Publicity Team Member</h3>
+              <p class="exp-org">QUASSO LIBERUM · Part-time</p>
+            </div>
+          </div>
+          <p class="exp-desc">
+            Handled social media outreach and promotional activities for Quasso Liberum (National level Techno-Cultural Fest at CEV). Designed digital publicity assets and coordinated multi-campus outreach campaigns.
+          </p>
+          <div class="exp-tags">
+            <span class="ptag">Publicity</span>
+            <span class="ptag">Event Management</span>
+            <span class="ptag">Social Media</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== EDUCATION ========== -->
+  <section class="section education-section" id="education">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">04 / Education</span>
+        <h2 class="section-title">My Academic Journey</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item" id="edu-1">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-year">2023 – 2027</div>
+            <h3 class="timeline-title">B.Tech in Information Technology</h3>
+            <p class="timeline-org">College of Engineering Vadakara</p>
+            <p class="timeline-desc">Focusing on software development, networks, data structures, algorithms, and web technologies. Actively coordinating college coding initiatives and leading entrepreneurship campaigns.</p>
+            <div class="timeline-tags">
+              <span class="ptag">IPR Lead</span>
+              <span class="ptag">TinkerHub Team</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item" id="edu-2">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-year">2021 – 2023</div>
+            <h3 class="timeline-title">Higher Secondary Education (12th)</h3>
+            <p class="timeline-org">MES International School Pattambi</p>
+            <p class="timeline-desc">Completed high secondary education focusing on Physics, Chemistry, Mathematics, and Computer Science.</p>
+            <div class="timeline-tags">
+              <span class="ptag">Computer Science</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item" id="edu-3">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-year">2021</div>
+            <h3 class="timeline-title">High School Education (10th)</h3>
+            <p class="timeline-org">MES International School Pattambi</p>
+            <p class="timeline-desc">Completed secondary school education with excellent academic records.</p>
+            <div class="timeline-tags">
+              <span class="ptag">Distinction</span>
+              <span class="ptag">Grade: 10th</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">05 / Contact</span>
+        <h2 class="section-title">Let's Work Together</h2>
+        <p class="section-subtitle">Have a project in mind? I'd love to hear about it.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-card" id="contact-email-card">
+            <div class="contact-icon">✉️</div>
+            <h4>Email Me</h4>
+            <a href="mailto:veenveenaprasad@gmail.com">veenveenaprasad@gmail.com</a>
+          </div>
+          <div class="contact-card" id="contact-github-card">
+            <div class="contact-icon">💻</div>
+            <h4>GitHub</h4>
+            <a href="https://github.com/veenveenaprasad/" target="_blank">github.com/veenveenaprasad</a>
+          </div>
+          <div class="contact-card" id="contact-linkedin-card">
+            <div class="contact-icon">🔗</div>
+            <h4>LinkedIn</h4>
+            <a href="https://www.linkedin.com/in/veenaveenaprasad/" target="_blank">linkedin.com/in/veenaveenaprasad</a>
+          </div>
+        </div>
+        <form class="contact-form" id="contact-form" onsubmit="handleFormSubmit(event)">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="John Doe" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="john@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Project Collaboration" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" id="submit-btn">
+            <span id="btn-text">Send Message 🚀</span>
+          </button>
+          <div class="form-success" id="form-success">
+            ✅ Message sent! I'll get back to you soon.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <p>Designed & Built by <span class="gradient-text">Veena Prasad</span></p>
+      <p class="footer-copy">© 2025 · All rights reserved</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
